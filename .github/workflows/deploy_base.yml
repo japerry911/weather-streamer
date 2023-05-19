@@ -15,13 +15,13 @@ jobs:
     environment: ${{ inputs.environment }}
 
     steps:
-    - id: auth
-      uses: google-github-actions/auth@v1
-      with:
-        credentials_json: ${{ secrets.GCP_CREDENTIALS }}
-    - name: Set up Cloud SDK
-      uses: google-github-actions/setup-gcloud@v1
-    - name: Checkout
-      uses: actions/checkout@v3
-    - name: Run Pub/Sub Deployment in Deployment Manager
-      run: gcloud deployment-manager deployments update pub-sub --config infrastructure/pub-sub-topic.yml --project ${{ secrets.GCP_PROJECT_ID }}
+      - name: Checkout
+        uses: actions/checkout@v3
+      - id: auth
+        uses: google-github-actions/auth@v1
+        with:
+          credentials_json: ${{ secrets.GCP_CREDENTIALS }}
+      - name: Set up Cloud SDK
+        uses: google-github-actions/setup-gcloud@v1
+      - name: Run Pub/Sub Deployment in Deployment Manager
+        run: gcloud deployment-manager deployments update pub-sub --config infrastructure/pub-sub-topic.yml --project ${{ secrets.GCP_PROJECT_ID }}
