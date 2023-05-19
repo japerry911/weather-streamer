@@ -1,0 +1,13 @@
+name: Deploy
+
+on:
+  push:
+    branches: "main"
+  workflow_dispatch:
+
+jobs:
+  deployment-manager:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkpoint
+        uses: actions/checkout@v3

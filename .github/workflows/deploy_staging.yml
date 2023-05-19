@@ -1,0 +1,13 @@
+name: Deploy - Staging
+
+on:
+  push:
+    branches:
+      - staging-*
+
+jobs:
+  deploy_all:
+    uses: ./.github/workflows/deploy_base.yml
+    with:
+      environment: staging
+    secrets: inherit
