@@ -8,9 +8,6 @@ on:
         required: true
         type: string
 
-env:
-  GCP_CREDENTIALS: ${{ secrets.GCP_CREDENTIALS }}}
-
 jobs:
   deployment-manager:
     runs-on: ubuntu-latest
