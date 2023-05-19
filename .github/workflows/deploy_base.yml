@@ -19,8 +19,7 @@ jobs:
     - id: 'auth'
       uses: 'google-github-actions/auth@v1'
       with:
-        workload_identity_provider: 'projects/78688761467/locations/global/workloadIdentityPools/github-actions/providers/weather-streamer'
-        service_account: '"github-actions@weather-streamer.iam.gserviceaccount.com"'
+        credentials_json: '${{ secrets.GCP_CREDENTIALS }}'
 
     - name: 'Set up Cloud SDK'
       uses: 'google-github-actions/setup-gcloud@v1'
