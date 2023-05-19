@@ -9,7 +9,7 @@ jobs:
   isort:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkpoint
+      - name: Checkout
         uses: actions/checkout@v3
       - name: Install isort
         run: |
@@ -20,7 +20,7 @@ jobs:
   black:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkpoint
+      - name: Checkout
         uses: actions/checkout@v3
       - name: Install black
         run: |
@@ -31,7 +31,7 @@ jobs:
   flake8:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkpoint
+      - name: Checkout
         uses: actions/checkout@v3
       - name: Install flake8
         run: |
