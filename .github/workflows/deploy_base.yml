@@ -8,6 +8,10 @@ on:
         required: true
         type: string
 
+env:
+    GCP_PROJECT: ${{ secrets.GCP_PROJECT }}
+    GCP_CREDENTIALS: ${{ secrets.GCP_CREDENTIALS }}
+
 jobs:
   deployment-manager:
     runs-on: ubuntu-latest
@@ -15,7 +19,7 @@ jobs:
     - id: 'auth'
       uses: 'google-github-actions/auth@v1'
       with:
-        credentials_json: '${{ secrets.GCP_CREDENTIALS }}'
+        credentials_json: '$GCP_CREDENTIALS'
 
     - name: 'Set up Cloud SDK'
       uses: 'google-github-actions/setup-gcloud@v1'
