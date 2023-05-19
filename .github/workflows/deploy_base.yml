@@ -12,10 +12,6 @@ jobs:
   deployment_manager:
     runs-on: ubuntu-latest
 
-    permissions:
-      contents: 'read'
-      id-token: 'write'
-
     steps:
     - id: 'auth'
       uses: 'google-github-actions/auth@v1'
