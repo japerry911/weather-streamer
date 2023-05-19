@@ -9,7 +9,8 @@ on:
         type: string
 
 jobs:
-  job_id:
+  deployment-manager:
+    runs-on: ubuntu-latest
     steps:
     - id: 'auth'
       uses: 'google-github-actions/auth@v1'
