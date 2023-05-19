@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "weather-streamer"
+version = "0.1.0"
+description = ""
+authors = ["Jack Perry <jack.e.perry@outlook.com>"]
+readme = "README.md"
+packages = [{include = "weather_streamer"}]
+
+[tool.poetry.dependencies]
+python = "~3.10"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
