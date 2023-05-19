@@ -9,7 +9,7 @@ on:
         type: string
 
 env:
-  GCP_CREDENTIALS: {{ secrets.GCP_CREDENTIALS }}}
+  GCP_CREDENTIALS: ${{ secrets.GCP_CREDENTIALS }}}
 
 jobs:
   deployment-manager:
