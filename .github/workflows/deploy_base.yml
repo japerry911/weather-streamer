@@ -24,4 +24,4 @@ jobs:
       - name: Set up Cloud SDK
         uses: google-github-actions/setup-gcloud@v1
       - name: Run Pub/Sub Deployment in Deployment Manager
-        run: gcloud deployment-manager deployments update pub-sub --config infrastructure/pub-sub-topic.yml --project ${{ secrets.GCP_PROJECT_ID }}
+        run: gcloud deployment-manager deployments update pub-sub-topic --config infrastructure/pub-sub-topic.yml --project ${{ secrets.GCP_PROJECT_ID }}
