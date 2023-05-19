@@ -13,13 +13,18 @@ env:
     GCP_CREDENTIALS: ${{ secrets.GCP_CREDENTIALS }}
 
 jobs:
-  deployment-manager:
-    runs-on: ubuntu-latest
+  job_id:
+    # Add "id-token" with the intended permissions.
+    permissions:
+      contents: 'read'
+      id-token: 'write'
+
     steps:
     - id: 'auth'
       uses: 'google-github-actions/auth@v1'
       with:
-        credentials_json: '$GCP_CREDENTIALS'
+        workload_identity_provider: 'projects/78688761467/locations/global/workloadIdentityPools/github-actions/providers/weather-streamer'
+        service_account: '"github-actions@weather-streamer.iam.gserviceaccount.com"'
 
     - name: 'Set up Cloud SDK'
       uses: 'google-github-actions/setup-gcloud@v1'
