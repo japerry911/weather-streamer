@@ -7,7 +7,6 @@ on:
         description: Environment that should be used for the Workflow (staging or production)
         required: true
         type: string
-  workflow_dispatch:
 
 jobs:
   deployment_manager:
