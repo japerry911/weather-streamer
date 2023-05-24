@@ -8,7 +8,13 @@ packages = [{include = "weather_streamer"}]
 
 [tool.poetry.dependencies]
 python = "~3.10"
+Faker = "^18.9.0"
+google-cloud-pubsub = "^2.17.1"
 
+[tool.poetry.group.file_linters.dependencies]
+black = "^23.3.0"
+flake8 = "^6.0.0"
+isort = "^5.12.0"
 
 [build-system]
 requires = ["poetry-core"]

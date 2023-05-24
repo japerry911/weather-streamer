@@ -6,3 +6,10 @@ services:
       target: file_linters
     volumes:
       - ".:/app"
+  main_build_service:
+    image: main_build_service:latest
+    build:
+      context: .
+      target: main_build_service
+    volumes:
+      - '.:/app'
