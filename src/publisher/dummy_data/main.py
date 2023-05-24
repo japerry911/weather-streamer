@@ -1,6 +1,7 @@
+from time import sleep
+
 from faker import Faker
 from google.cloud import pubsub_v1
-from time import sleep
 
 
 def main():
