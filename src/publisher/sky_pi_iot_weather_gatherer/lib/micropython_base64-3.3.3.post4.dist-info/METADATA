@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: micropython-base64
+Version: 3.3.3.post4
+Summary: CPython base64 module ported to MicroPython
+Home-page: https://github.com/micropython/micropython-lib
+Author: MicroPython Developers
+Author-email: micro-python@googlegroups.com
+License: Python
+Requires-Dist: micropython-binascii
+Requires-Dist: micropython-re-pcre
+Requires-Dist: micropython-struct
+
