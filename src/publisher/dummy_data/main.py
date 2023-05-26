@@ -1,5 +1,5 @@
-from datetime import datetime
 import logging
+from datetime import datetime
 from random import choice
 from time import sleep
 
