@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: micropython-binascii
+Version: 2.4.0.post5
+Summary: PyPy binascii module ported to MicroPython
+Home-page: https://github.com/micropython/micropython-lib
+Author: MicroPython Developers
+Author-email: micro-python@googlegroups.com
+License: MIT
+
