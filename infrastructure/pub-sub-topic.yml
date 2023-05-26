@@ -1,5 +1,0 @@
-resources:
-- name: weather-streaming-topic
-  type: gcp-types/pubsub-v1:projects.topics
-  properties:
-    topic: weather-streamer
