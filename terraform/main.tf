@@ -69,11 +69,11 @@ resource "google_bigquery_table" "home_weather_data" {
 EOF
 }
 
-resource "google_dataflow_job" "weather_streaming_dataflow_job" {
-  name = "weather-streaming-dataflow-job"
-  temp_gcs_location = "gs://dataflow-bucket-123214324/temp"
-  max_workers = 1
-  machine_type = "n1-standard-1"
-  region = "us-central1"
-
-}
+#resource "google_dataflow_job" "weather_streaming_dataflow_job" {
+#  name = "weather-streaming-dataflow-job"
+#  temp_gcs_location = "gs://dataflow-bucket-123214324/temp"
+#  max_workers = 1
+#  machine_type = "n1-standard-1"
+#  region = "us-central1"
+#
+#}
