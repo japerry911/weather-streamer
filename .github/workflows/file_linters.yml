@@ -47,7 +47,7 @@ jobs:
       - name: Install TerraForm
         uses: hashicorp/setup-terraform@v1
       - name: Terraform Format
-        run: terraform -chdir fmt -check
+        run: terraform -chdir=terraform fmt -check
   terraform_validate:
     runs-on: ubuntu-latest
     steps:
@@ -56,4 +56,4 @@ jobs:
       - name: Install TerraForm
         uses: hashicorp/setup-terraform@v1
       - name: Terraform Validate
-        run: terraform -chdir validate
+        run: terraform -chdir=terraform validate
