@@ -8,8 +8,6 @@ terraform {
 }
 
 provider "google" {
-  credentials = file("../credentials.json")
-
   project = "weather-streamer"
   region  = "us-central1"
   zone    = "us-central1-a"
