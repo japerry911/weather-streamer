@@ -16,8 +16,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Terraform Init
+      - name: Install TerraForm
         uses: hashicorp/setup-terraform@v1
+      - name: Terraform Init
+        run: terraform -chdir=terraform init
+        env:
+          GOOGLE_CREDENTIALS: ${{ secrets.GCP_CREDENTIALS }}
       - name: Terraform Apply
         run: terraform -chdir=terraform apply -auto-approve
         env:
