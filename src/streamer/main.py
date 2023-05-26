@@ -7,7 +7,6 @@ from apache_beam.options.pipeline_options import (
     SetupOptions,
     StandardOptions,
 )
-from apache_beam.io.gcp.internal.clients import bigquery
 
 
 class PrepareDataForBigQuery(beam.DoFn):

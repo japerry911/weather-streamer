@@ -16,15 +16,17 @@ def main():
     logger.setLevel(logging.INFO)
 
     logger.info("Generating and Publishing Messages")
-    generate_and_publish_messages(num=1_000)
+    generate_and_publish_messages(num=3, logger=logger)
 
 
-def generate_and_publish_messages(num: int):
+def generate_and_publish_messages(num: int, logger: logging.Logger):
     fake = Faker()
     publisher = pubsub_v1.PublisherClient()
     topic_name = "projects/weather-streamer/topics/weather-streamer"
 
-    for _ in range(num):
+    for idx in range(num):
+        logger.info(f"Publishing message #{idx + 1}")
+
         message = ",".join(
             [
                 datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
