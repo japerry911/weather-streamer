@@ -25,3 +25,14 @@ Once published to Google Cloud Pub/Sub the data is processed by Google Cloud Dat
 - Google Cloud DataFlow
 - Google Cloud BigQuery
 - Google Cloud Storage
+
+## CI/CD/DevOps Infrastructure
+- GitHub Actions
+- Terraform
+- Docker/Docker-Compose
+
+# Environment Tools
+- flake8
+- black
+- isort
+- PyCharm
