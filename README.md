@@ -1,5 +1,7 @@
 # Weather-Streamer
 
+- blog post located [here](https://jackskylord.medium.com/sky-weather-real-time-weather-updates-with-python-gcp-13c0d6c5fcb)
+
 ## Description
 This project utilizes multiple Raspberry Pi Pico W's to collect weather data and publish it to Google Cloud Pub/Sub every 30 seconds.
 Once published to Google Cloud Pub/Sub the data is processed by Google Cloud DataFlow and landed to Google Cloud BigQuery.
@@ -8,7 +10,7 @@ Once published to Google Cloud Pub/Sub the data is processed by Google Cloud Dat
 - 2 Raspberry Pi Pico W
 - 2 Si7021 Temperature, and Humidity Sensors (Adafruit)
 - 2 Micro USB Power Cords for the Pis
-- 2 Jumper Wires (for connecting Pis to sensors)
+- 2 QT Wires (for connecting Pis to sensors)
 
 ## Software for Pis
 - [Thonny IDE](https://thonny.org/) (for flashing the Raspberry Pi Pico W's)
@@ -31,8 +33,9 @@ Once published to Google Cloud Pub/Sub the data is processed by Google Cloud Dat
 - Terraform
 - Docker/Docker-Compose
 
-# Environment Tools
+## Environment Tools
 - flake8
 - black
 - isort
 - PyCharm
+
